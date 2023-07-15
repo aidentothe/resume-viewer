@@ -7,8 +7,8 @@ set -e
 
 # Configuration
 REPO_URL="https://github.com/aidentothe/resume-viewer.git"
-WEEKEND_START="2025-07-12 09:00:00"  # Saturday morning
-WEEKEND_END="2025-07-13 22:00:00"    # Sunday evening
+WEEKEND_START="2023-07-15 09:00:00"  # Saturday morning
+WEEKEND_END="2023-07-16 22:00:00"    # Sunday evening
 
 # Colors for output
 RED='\033[0;31m'
@@ -35,15 +35,15 @@ fi
 
 # Define commit phases with realistic weekend timing
 declare -a COMMIT_PHASES=(
-    "2025-07-12 09:30:00|Initial project setup and LaTeX structure"
-    "2025-07-12 11:15:00|Add LaTeX compilation scripts"
-    "2025-07-12 14:20:00|Create Next.js preview application"
-    "2025-07-12 16:45:00|Implement LaTeX editor component"
-    "2025-07-12 19:10:00|Add resume preview functionality"
-    "2025-07-13 10:00:00|Style improvements and responsive design"
-    "2025-07-13 13:30:00|Add build scripts and development workflow"
-    "2025-07-13 16:15:00|Final touches and documentation"
-    "2025-07-13 21:45:00|Project cleanup and optimization"
+    "2023-07-15 09:30:00|Initial project setup and LaTeX structure"
+    "2023-07-15 11:15:00|Add LaTeX compilation scripts"
+    "2023-07-15 14:20:00|Create Next.js preview application"
+    "2023-07-15 16:45:00|Implement LaTeX editor component"
+    "2023-07-15 19:10:00|Add resume preview functionality"
+    "2023-07-16 10:00:00|Style improvements and responsive design"
+    "2023-07-16 13:30:00|Add build scripts and development workflow"
+    "2023-07-16 16:15:00|Final touches and documentation"
+    "2023-07-16 21:45:00|Project cleanup and optimization"
 )
 
 # Function to create backdated commit
