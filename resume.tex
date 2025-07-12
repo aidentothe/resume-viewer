@@ -1,0 +1,79 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+% Custom section formatting
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\parskip}{-\parskip}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Reduce spacing between items
+\setlist{nosep}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\LARGE \textbf{Your Name}} \\
+    \vspace{2pt}
+    \href{mailto:your.email@example.com}{your.email@example.com} $\cdot$ 
+    \href{https://linkedin.com/in/yourprofile}{linkedin.com/in/yourprofile} $\cdot$ 
+    \href{https://github.com/yourusername}{github.com/yourusername} \\
+    Phone: (555) 123-4567 $\cdot$ Location: City, State
+\end{center}
+
+\vspace{10pt}
+
+\section{Education}
+\textbf{University Name} \hfill \textit{Graduation Date} \\
+Bachelor of Science in Computer Science \hfill GPA: 3.8/4.0 \\
+\textit{Relevant Coursework:} Data Structures, Algorithms, Software Engineering
+
+\section{Experience}
+\textbf{Software Engineer} \hfill \textit{Jan 2023 - Present} \\
+\textit{Company Name, City, State}
+\begin{itemize}
+    \item Developed and maintained web applications using React, Node.js, and MongoDB
+    \item Collaborated with cross-functional teams to deliver features for 10,000+ users
+    \item Improved application performance by 30\% through code optimization
+\end{itemize}
+
+\textbf{Software Development Intern} \hfill \textit{Jun 2022 - Aug 2022} \\
+\textit{Tech Company, City, State}
+\begin{itemize}
+    \item Built RESTful APIs using Python and Flask framework
+    \item Implemented automated testing increasing code coverage to 90\%
+    \item Participated in agile development process and daily standups
+\end{itemize}
+
+\section{Projects}
+\textbf{Personal Portfolio Website} \hfill \textit{React, Node.js, CSS}
+\begin{itemize}
+    \item Created responsive personal website showcasing projects and skills
+    \item Implemented dark/light theme toggle and smooth animations
+\end{itemize}
+
+\textbf{Task Management App} \hfill \textit{Python, Django, PostgreSQL}
+\begin{itemize}
+    \item Built full-stack web application for project and task management
+    \item Integrated user authentication and real-time notifications
+\end{itemize}
+
+\section{Technical Skills}
+\textbf{Programming Languages:} Python, JavaScript, Java, C++, SQL \\
+\textbf{Frameworks \& Libraries:} React, Node.js, Django, Flask, Express.js \\
+\textbf{Tools \& Technologies:} Git, Docker, AWS, MongoDB, PostgreSQL, Linux
+
+\section{Achievements}
+\begin{itemize}
+    \item Dean's List for 4 consecutive semesters
+    \item Winner of University Hackathon 2023
+    \item Contributed to 3 open-source projects with 100+ GitHub stars
+\end{itemize}
+
+\end{document}
