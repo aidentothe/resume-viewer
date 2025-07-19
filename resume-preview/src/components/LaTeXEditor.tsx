@@ -4,6 +4,7 @@ import { useState, useRef } from 'react'
 import Editor from '@monaco-editor/react'
 import { Download, Upload, FileText, Printer } from 'lucide-react'
 import ResumePreview from './ResumePreview'
+import FontSelector from './FontSelector'
 
 const INITIAL_LATEX = `%-------------------------
 % Resume in Latex
@@ -223,6 +224,8 @@ const INITIAL_LATEX = `%-------------------------
 
 export default function LaTeXEditor() {
   const [latexCode, setLatexCode] = useState(INITIAL_LATEX)
+  const [selectedFont, setSelectedFont] = useState('computer-modern')
+  const [fontCss, setFontCss] = useState('Computer Modern, serif')
   const editorRef = useRef<any>(null)
 
   const handleEditorDidMount = (editor: any, monaco: any) => {
@@ -295,6 +298,11 @@ export default function LaTeXEditor() {
     input.click()
   }
 
+  const handleFontChange = (fontId: string, fontCssName: string) => {
+    setSelectedFont(fontId)
+    setFontCss(fontCssName)
+  }
+
   return (
     <div className="h-screen flex flex-col bg-slate-50">
       {/* Header */}
@@ -305,6 +313,10 @@ export default function LaTeXEditor() {
             <h1 className="text-xl font-semibold text-slate-800">LaTeX Resume Editor</h1>
           </div>
           <div className="flex items-center space-x-3">
+            <FontSelector 
+              selectedFont={selectedFont}
+              onFontChange={handleFontChange}
+            />
             <button
               onClick={loadFile}
               className="flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-lg transition-colors duration-200 text-sm font-medium"
@@ -374,7 +386,7 @@ export default function LaTeXEditor() {
               <span className="text-slate-700 text-sm font-medium">Live Preview</span>
             </div>
             <div className="pt-10 h-full overflow-auto">
-              <div className="p-6">
+              <div className="p-6" style={{ fontFamily: fontCss }}>
                 <ResumePreview latexCode={latexCode} />
               </div>
             </div>
