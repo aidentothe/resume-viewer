@@ -1,0 +1,16 @@
+{
+  "name": "latex-editor",
+  "version": "1.0.0",
+  "description": "LaTeX editor and compilation environment",
+  "scripts": {
+    "build": "node compile.js",
+    "watch": "node compile.js --watch",
+    "clean": "rm -f *.aux *.log *.out *.toc *.synctex.gz",
+    "dev": "cd resume-preview && npm run dev",
+    "preview": "cd resume-preview && npm run dev"
+  },
+  "devDependencies": {
+    "chokidar": "^3.5.3",
+    "child_process": "^1.0.2"
+  }
+}
